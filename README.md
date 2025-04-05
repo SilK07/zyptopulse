@@ -1,16 +1,35 @@
-# zyptopulse
 
-A new Flutter project.
+# ZyptoPulse
+A simple app to fetch live crypto prices and save a few by making them favourites. Made using Flutter and Directus.
 
-## Getting Started
+## Acknowledgements
 
-This project is a starting point for a Flutter application.
+ - Used CoinGekko's API to fetch live crypto data.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How to Run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Clone the project
+
+```bash
+  git clone https://github.com/SilK07/zyptopulse
+```
+
+Go to the project directory
+
+```bash
+  cd zyptopulse
+```
+
+Install dependencies
+
+```bash
+  flutter pub get
+```
+
+Start the server
+
+```bash
+  flutter run
+```
+
