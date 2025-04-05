@@ -14,25 +14,57 @@ class FavoritesScreen extends ConsumerWidget {
 
     return Scaffold(
       backgroundColor: const Color(0xFF121828),
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF121828),
-        actions: [
-          IconButton(
-            icon: Image.asset('assets/icons/search.png', width: 44, height: 44),
-            onPressed: () {},
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Color(0x1B232A), // Your AppBar background
+            boxShadow: [
+              BoxShadow(
+                color: Color(0x80161C22), // #161C22 at 50% opacity
+                offset: Offset(0, 12),
+                blurRadius: 16,
+                spreadRadius: 0,
+              ),
+            ],
           ),
-          IconButton(
-            icon: Image.asset('assets/icons/scan.png', width: 44, height: 44),
-            onPressed: () {},
+          child: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            leading: Padding(
+              padding: const EdgeInsets.only(left: 12), // Optional spacing
+              child: GestureDetector(
+                onTap: () {
+                  // Handle profile tap
+                  print("Profile avatar tapped");
+                },
+                child: SizedBox(
+                  width: 36,
+                  height: 36,
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/wow.png'),
+                  ),
+                ),
+              ),
+            ),
+            actions: [
+              IconButton(
+                icon: Image.asset('assets/icons/search.png',
+                    width: 44, height: 44),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon:
+                    Image.asset('assets/icons/scan.png', width: 44, height: 44),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Image.asset('assets/icons/notif.png',
+                    width: 44, height: 44),
+                onPressed: () {},
+              ),
+            ],
           ),
-          IconButton(
-            icon: Image.asset('assets/icons/notif.png', width: 44, height: 44),
-            onPressed: () {},
-          ),
-        ],
-        leading: CircleAvatar(
-          backgroundImage: Image.asset('assets/profile.jpeg').image,
-          radius: 2,
         ),
       ),
       body: favoritesAsyncValue.when(
