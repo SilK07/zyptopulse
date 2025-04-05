@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zyptopulse/screens/home_screen.dart';
+import 'package:zyptopulse/screens/splash_screen.dart';
 import 'screens/auth_screen.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Roboto',
         brightness: Brightness.dark,
       ),
-      home: const AuthScreen(),
+      home: const SplashScreen(),
     );
   }
 }
