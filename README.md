@@ -27,7 +27,7 @@ Install dependencies
   flutter pub get
 ```
 
-Start the server
+Start the app
 
 ```bash
   flutter run
